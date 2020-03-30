@@ -61,6 +61,7 @@ def main():
 
     l3 = Solution().mergeTwoLists(l1_1,l2_1)
     myPrintList(l3)
+    myPrintList(l3)
 
 if __name__ == '__main__':
     main()
