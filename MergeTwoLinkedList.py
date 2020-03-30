@@ -44,7 +44,6 @@ def myPrintList(l):
 ##### when test on your own computer,  the create of the linked list.
 ##### this is important for you to understand more about the data structure of linked list.
 def main():
-    #     # 342 + 465 = 807
     l1=[1,2,3]
     l2=[4,5,6]
     l1_1 = ListNode(l1[0])
