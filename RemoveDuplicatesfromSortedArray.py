@@ -28,6 +28,30 @@ for (int i = 0; i < len; i++) {
     print(nums[i]);
 }
 '''
+import numpy as np
 
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
+    def removeDuplicates(self, nums) -> int:
+        leng=len(nums)
+        count=1
+
+        if len(nums)==0:
+            return 0
+        for i in range(1,leng):
+            if nums[i-1]!=nums[i]:
+                nums[count]=nums[i]
+                count+=1
+        return count
+
+solution=Solution()
+count=solution.removeDuplicates([1,1,1,1])
+print(count)
+
+
+## the second method, using only the set() function
+nums_1=[1,2,3,3]
+nums_1=list(set(nums_1))
+print (len(nums_1))
+
+
+
