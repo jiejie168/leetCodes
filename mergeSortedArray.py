@@ -25,6 +25,8 @@ class Solution:
                 nums1[m-1+n]=nums2[n-1]
                 n=n-1
             else:
+                # all put the largest digit on the farest right place,
+                # use 0 replace the original place
                 nums1[m-1],nums1[m-1+n]=nums1[m-1+n],nums1[m-1]
                 m=m-1
         if m==0 and n>0:
