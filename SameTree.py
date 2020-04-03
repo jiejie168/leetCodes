@@ -29,6 +29,7 @@ Input:     1         1
         [1,2,1],   [1,1,2]
 Output: false
 """
+from collections import deque
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
@@ -46,5 +47,40 @@ class Solution:
             return p.val==q.val and self.isSameTree(p.left,q.left) and self.isSameTree(p.right, q.right)
         return False
 
+    def isSameTree_1(self,p,q):
+        # utilize the iteration method
+        def check(p,q):
+            if p is None and q is None:
+                return True
+            if not p  or not q:
+                return False
+            if p.val!=q.val:
+                return False
+            return True
+
+        de=deque([(p,q),])
+        while de:
+            p,q=de.popleft()
+            if not check(p,q):
+                return False
+            if p:
+                de.append([(p.left,q.left),])
+                de.append([(p.right,q.right),])
+        return True
+
+
+
+
+
+
+# de=deque([1,2,3])
+# de.append(4)
+# print (de)
+# de.appendleft(0)
+# print (de)
+# de.pop()
+# print (de)
+# de.popleft()
+# print (de)
 
 
