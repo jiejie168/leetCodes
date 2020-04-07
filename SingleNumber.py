@@ -38,7 +38,6 @@ class Solution:
         # math:  2*(a+b+c)-(a+a+b+b+c)=c
         return 2*sum(set(nums))-sum(nums)
 
-
 solution=Solution()
 nums=[4,1,2,1,2]
 ans=solution.singleNumber_2(nums)
