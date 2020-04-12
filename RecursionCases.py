@@ -1,6 +1,8 @@
 __author__ = 'Jie'
 """
 training of utilize recursion algorithm
+#   step 1: find an exit, when to end; step 2: find the recursion relation: case n how to case (n+1); 
+#step3: initial condition, how to start. 
 """
 
 class Recursion:
